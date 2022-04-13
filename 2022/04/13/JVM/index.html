@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Blog">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="JVM, Blog">
+    <meta name="description" content="jvm基础知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Hello World | Blog</title>
+    <title>JVM | Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">JVM</h1>
                 </div>
             </div>
         </div>
@@ -430,14 +430,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/First-Blog/">
-                                <span class="chip bg-color">First Blog</span>
+                            <a href="/tags/JVM/">
+                                <span class="chip bg-color">JVM</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="post-category">
+                                Java虚拟机
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -460,14 +469,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -490,19 +499,84 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <ul>
+<li>请你谈谈对JVM的理解? java8虚拟机和之前的变化更新</li>
+<li>什么是OOM(内存溢出)? 什么是栈溢出(stackOverFlowError)? 怎么分析?</li>
+<li>JVM常用的调优参数有哪些?</li>
+<li>内存快照如何抓取? 怎么分析Domp文件 ? 知道吗?</li>
+<li>谈谈JVM中,类加载器你的认识?</li>
+</ul>
+<h1 id="1-JVM的位置"><a href="#1-JVM的位置" class="headerlink" title="1.JVM的位置"></a>1.JVM的位置</h1><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648544772214-88c91aeb-5084-40ed-9c39-0c263f359e4a.png#clientId=ua2864186-cdc8-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u0bda4197&originHeight=526&originWidth=524&originalType=url&ratio=1&rotation=0&showTitle=false&size=119986&status=done&style=none&taskId=ue48ccd1e-4dab-4c86-af41-84396fa35fe&title=" alt="image.png"></p>
+<h1 id="2-jvm的体系"><a href="#2-jvm的体系" class="headerlink" title="2.jvm的体系"></a>2.jvm的体系</h1><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648544892759-f947e880-ceb1-42db-b98e-8d5295b63562.png#clientId=ua2864186-cdc8-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u9136ed99&originHeight=586&originWidth=863&originalType=url&ratio=1&rotation=0&showTitle=false&size=141205&status=done&style=none&taskId=u395bb536-6df4-4fe2-b7f3-161c9f30130&title=" alt="image.png"><br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648545189519-c0d39c94-e78b-4ff1-99c8-023090c5a5b2.png#clientId=ua2864186-cdc8-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u4f6323d3&originHeight=525&originWidth=738&originalType=url&ratio=1&rotation=0&showTitle=false&size=117675&status=done&style=none&taskId=uc2c6e7e2-5ec3-427d-b07d-8180845e934&title=" alt="image.png"></p>
+<h1 id="3-类加载器"><a href="#3-类加载器" class="headerlink" title="3.类加载器"></a>3.类加载器</h1><pre><code> 作用：加载 class文件
+</code></pre>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648545610429-11508ee3-4ac1-4533-8b86-4bb382797f39.png#clientId=ua2864186-cdc8-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uaabadb7f&originHeight=438&originWidth=741&originalType=url&ratio=1&rotation=0&showTitle=false&size=66883&status=done&style=none&taskId=u09a651ba-7a78-4883-9734-b2dbb1fcb67&title=" alt="image.png"><br />种类：</p>
+<ul>
+<li>虚拟机自带的加载器</li>
+<li>启动类（根）加载器</li>
+<li>扩展类加载器</li>
+<li>应用程序加载器</li>
+</ul>
+<h1 id="4-双亲委派机制"><a href="#4-双亲委派机制" class="headerlink" title="4.双亲委派机制"></a>4.双亲委派机制</h1><p>app—&gt;扩展类(ext) —-&gt; (启动类)根加载器(rt)<br />当一个类收到了类加载请求，他首先不会尝试自己去加载这个类，而是把这个请求委派给父类去完成，每一个层次类加载器都是如此， 因此所有的加载请求都应该传送到启动类加载其中<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648547288200-e817c805-1153-4ccc-8b71-4fa78816f63d.png#clientId=ua2864186-cdc8-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u02054e79&originHeight=1240&originWidth=1312&originalType=url&ratio=1&rotation=0&showTitle=false&size=473279&status=done&style=none&taskId=u51bcbf5d-9d34-4b25-bb23-55565a4351b&title=" alt="image.png"><br /><strong>过程：</strong>当一个类加载请求开始时，首先从APPClassLoader进入，先判断是否已经加载过，若加载过则不再加载，若没加载过，则交给自己的上层扩展类加载器，然后相同步骤，若没加载过，再交给启动类加载器，若启动类加载器也没加载过，此时已经没有再上一层的加载器了，于是判断自己是否可以加载，如果不能加载，则下沉到下一层的扩展类加载器，以此类推，直到应用程序类加载器，如果最后都不能加载，则报出ClassNotFoundException错误</p>
+<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><ul>
+<li>避免重复加载类</li>
+<li>沙箱安全机制</li>
+</ul>
+<h1 id="5-沙箱安全机制"><a href="#5-沙箱安全机制" class="headerlink" title="5.沙箱安全机制"></a>5.沙箱安全机制</h1><p>保证核心<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=API&spm=1001.2101.3001.7020">API</a>源代码的保护，引导类加载器只加载核心API，不加载自定义的与核心API同名或同包名的API。</p>
+<h1 id="6-Native"><a href="#6-Native" class="headerlink" title="6.Native"></a>6.Native</h1><p>Native 关键字 调用 本地方法栈—-&gt; JNI (java Native Interface本地方法接口) 调用外部语言程序<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648719749093-fc63d693-66f6-4ddd-a0b6-c2d93d12db46.png#clientId=uc724b46b-187a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u27af7b57&originHeight=170&originWidth=692&originalType=url&ratio=1&rotation=0&showTitle=false&size=163877&status=done&style=none&taskId=uc6b8be60-239f-48d9-a808-7bc33c406c2&title=" alt="image.png"></p>
+<h1 id="7-程序计数器"><a href="#7-程序计数器" class="headerlink" title="7.程序计数器"></a>7.程序计数器</h1><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648720191895-f42faef2-9093-4945-a6ab-01bd7fbc603b.png#clientId=uc724b46b-187a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u8db8404b&originHeight=128&originWidth=838&originalType=url&ratio=1&rotation=0&showTitle=false&size=101469&status=done&style=none&taskId=u58c5c243-f703-4e50-852d-7ee764e785a&title=" alt="image.png"></p>
+<h1 id="8-方法区"><a href="#8-方法区" class="headerlink" title="8.方法区"></a>8.方法区</h1><p>方法区是被所有线程共享的,所有字段和方法字节码,以及一些特殊方法,如构造函数,接口代码也在此定义,简单说,所有定义的方法的信息都保存在该区域,<strong>此区域属于共享区间</strong>;<br />	静态变量(static),常量(final),类信息(构造方法,接口定义),运行时的常量池存在方法区中,但是实例变量存在堆内存中,和方法区无关.<br />static ,final, Class , 常量池</p>
+<h1 id="9-栈"><a href="#9-栈" class="headerlink" title="9.栈"></a>9.栈</h1><p>栈:栈<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%86%85%E5%AD%98&spm=1001.2101.3001.7020">内存</a>,主管程序的运行,生命周期和线程同步;<br />线程结束,栈内存也就释放了,对于栈来说,不存在垃圾回收问题<br />一旦线程结束,栈就Over<br /><strong>主要存储</strong>：8大基本类型+ 对象引用+实例的方法</p>
+<h1 id="10-堆"><a href="#10-堆" class="headerlink" title="10.堆"></a>10.堆</h1><p>一个JVM只有一个堆内存，堆内存的大小是可以调节的<br />堆内存中还要细分为三个区域:</p>
+<ul>
+<li>新生区 (伊甸园区) Young&#x2F;New ,eden space</li>
+<li>养老区 old</li>
+<li>永久区 Permanent jdk8之后叫做 “元空间”</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648733899530-02206d74-10b0-41e6-b782-a205317234a9.png#clientId=uc724b46b-187a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud0377ec7&originHeight=574&originWidth=811&originalType=url&ratio=1&rotation=0&showTitle=false&size=137333&status=done&style=none&taskId=uef230b42-b2c5-4a52-bbf8-cd5cb9d236a&title=" alt="image.png"></p>
+<h2 id="新生区（满了-轻GC）"><a href="#新生区（满了-轻GC）" class="headerlink" title="新生区（满了 轻GC）"></a>新生区（满了 轻GC）</h2><ul>
+<li><p>类 ： 诞生和成长的地方 ， 甚至死亡；</p>
+</li>
+<li><p>伊甸园， 所有的对象都是在伊甸园区new出来的</p>
+</li>
+<li><p>幸存区（0，1）</p>
+</li>
+<li><p>经研究99%的对象都是临时对象</p>
+<h2 id="老年区（满了-重GC）"><a href="#老年区（满了-重GC）" class="headerlink" title="老年区（满了 重GC）"></a>老年区（满了 重GC）</h2><h2 id="永久区（元空间）"><a href="#永久区（元空间）" class="headerlink" title="永久区（元空间）"></a>永久区（元空间）</h2><p>这个区域常驻内存的. 用来存放jdk自身携带的Class对象.Interface元数据,存储的是java运行时的一些环境或类信息,这个区域不存在垃圾回收!关闭vm虚拟就会释放这个区域的内存~.</p>
+</li>
+<li><p>jdk1.6之前 :永久代,常量池是在方法区;</p>
+</li>
+<li><p>jdk1.7 :永久代,但是慢慢退化了, 去永久代,常量池在堆中;</p>
+</li>
+<li><p>jdk1.8之后:无永久代, 常量池在元空间;</p>
+</li>
+<li><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648735076894-6d8dd9c3-d949-4563-acad-7532a5ccc557.png#clientId=uc724b46b-187a-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u76447e61&originHeight=186&originWidth=670&originalType=url&ratio=1&rotation=0&showTitle=false&size=43913&status=done&style=none&taskId=ubb4b290d-d691-4bf5-9b65-c324405fb4c&title=" alt="image.png"></p>
+</li>
+</ul>
+<p>元空间逻辑上存在，物理上不存在</p>
+<h1 id="11-GC-垃圾回收"><a href="#11-GC-垃圾回收" class="headerlink" title="11.GC 垃圾回收"></a>11.GC 垃圾回收</h1><p>GC:作用区域 堆+方法区<br />JVM在进行GC时，并不是对这三个区域统一回收。大部分时候，回收都是新生代~</p>
+<ul>
+<li>新生代</li>
+<li>幸存区（from ， to）</li>
+<li>老年区</li>
+</ul>
+<p>GC两种：轻GC（普通GC），重GC（全局GC）</p>
+<h1 id="12-常用算法"><a href="#12-常用算法" class="headerlink" title="12.常用算法"></a>12.常用算法</h1><h2 id="1-复制算法"><a href="#1-复制算法" class="headerlink" title="1.复制算法"></a>1.复制算法</h2><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648800715617-4d2b2864-bc17-4c29-873e-7d7a176bba81.png#clientId=uef992677-9ebd-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u94fd49aa&originHeight=620&originWidth=773&originalType=url&ratio=1&rotation=0&showTitle=false&size=201085&status=done&style=none&taskId=ub9dc2040-a063-4557-b771-e971b908039&title=" alt="image.png"></p>
+<ul>
+<li><p>好处:没有内存的碎片</p>
+</li>
+<li><p>坏处:浪费了内存空间:多了一半空间永远是空 to.假设对象100%存活(极端情况)</p>
+</li>
+<li><p><strong>复制算法最佳使用场景</strong>:对象存活度较低的时候:新生区;</p>
+<h2 id="2-标记清除法"><a href="#2-标记清除法" class="headerlink" title="2.标记清除法"></a>2.标记清除法</h2><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648800795077-d75a4b16-4501-4c95-b525-842c971743d0.png#clientId=uef992677-9ebd-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc89d7bb4&originHeight=513&originWidth=775&originalType=url&ratio=1&rotation=0&showTitle=false&size=120928&status=done&style=none&taskId=u8bd7aacb-8633-4feb-ab4d-d603c5fca19&title=" alt="image.png"></p>
+</li>
+<li><p>优点:不需要额外的空间</p>
+</li>
+<li><p>缺点:两次扫描,严重浪费时间,会产生内存碎片</p>
+<h2 id="3-标记整理法"><a href="#3-标记整理法" class="headerlink" title="3.标记整理法"></a>3.标记整理法</h2><p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648801445534-4625394c-fec6-4e6c-b97d-2c5680584317.png#clientId=uef992677-9ebd-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u741eb630&originHeight=568&originWidth=531&originalType=url&ratio=1&rotation=0&showTitle=false&size=116947&status=done&style=none&taskId=u00658d2e-c9f3-4909-95b1-f855cae4a3a&title=" alt="image.png"></p>
+<h2 id="4-算法比较"><a href="#4-算法比较" class="headerlink" title="4.算法比较"></a>4.算法比较</h2></li>
+</ul>
+<p><strong>效率</strong>:复制算法&gt;标记清除算法&gt;标记压缩算法(时间复杂度)<br /><strong>内存整齐度</strong>:复制算法&#x3D;标记压缩算法&gt;标记清除算法<br /><strong>内存利用率</strong>:标记压缩算法&#x3D;标记清除算法&gt;复制算法</p>
 
                 
             </div>
@@ -529,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://910650692.github.io/2022/04/13/hello-world/">https://910650692.github.io/2022/04/13/hello-world/</a>
+                    <a href="https://910650692.github.io/2022/04/13/JVM/">https://910650692.github.io/2022/04/13/JVM/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -567,8 +641,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/First-Blog/">
-                                    <span class="chip bg-color">First Blog</span>
+                                <a href="/tags/JVM/">
+                                    <span class="chip bg-color">JVM</span>
                                 </a>
                             
                         </div>
@@ -746,19 +820,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/13/JVM/">
+                <a href="/2022/04/13/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JVM">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Mysql基础知识">
                         
-                        <span class="card-title">JVM</span>
+                        <span class="card-title">Mysql基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            jvm基础知识
+                            MySQL基础
                         
                     </div>
                     <div class="publish-info">
@@ -769,8 +843,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="post-category">
-                                    Java虚拟机
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
@@ -780,8 +854,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JVM/">
-                        <span class="chip bg-color">JVM</span>
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
@@ -792,7 +870,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/04/13/hello-world/">
@@ -822,7 +900,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -945,6 +1022,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 

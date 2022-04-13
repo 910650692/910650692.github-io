@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Blog">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Mysql基础知识, Blog">
+    <meta name="description" content="MySQL基础">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>Hello World | Blog</title>
+    <title>Mysql基础知识 | Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Mysql基础知识</h1>
                 </div>
             </div>
         </div>
@@ -430,14 +430,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/First-Blog/">
-                                <span class="chip bg-color">First Blog</span>
+                            <a href="/tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/MySQL/" class="post-category">
+                                MySQL
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -460,14 +473,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    12 分
                 </div>
                 
 
@@ -490,19 +503,374 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <pre><code>     - **mysql关键字不区分大小写**
+     - 创建数据库     
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">create database [if not exists] westos;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>     - 删除数据库
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">drop database [if exists] westos;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>     - 使用数据库
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">use &#96;school&#96;
+-- 如果你的表名或者字段名是一个特殊字符（关键字），就需要带&#96;&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><a name="bAxBQ"></a></p>
+<h1 id="数据库的列类型"><a href="#数据库的列类型" class="headerlink" title="数据库的列类型"></a>数据库的列类型</h1><p><a name="ZvL3k"></a></p>
+<h2 id="1-数值"><a href="#1-数值" class="headerlink" title="1.数值"></a>1.数值</h2><pre><code>        - **整数**
+           1. tinyint  1个字节
+           1. smallint 2个字节
+           1. mediumint 3个字节
+           1. **int 4个字节**
+           1. bigint 8个字节
+        - 小数
+           1. float 4个字节
+           1. double 8个字节
+           1. decimal 字符串形式的浮点数
+</code></pre>
+<p><a name="p7DiI"></a></p>
+<h2 id="2-字符串"><a href="#2-字符串" class="headerlink" title="2.字符串"></a>2.字符串</h2><pre><code>        1. char 字符串固定大小的0-255
+        1. **varchar 可变字符串 0-65535	常用的 String**
+        1. tinytext 微型文本 2^8-1
+        1. text 文本串 2^16-1
+</code></pre>
+<p><a name="rCRjW"></a></p>
+<h2 id="3-时间日期"><a href="#3-时间日期" class="headerlink" title="3.时间日期"></a>3.时间日期</h2><pre><code>        1. date YYYY-MM-DD 日期
+        1. time HH:mm：ss 时间格式
+        1. **datetime YYYY-MM-DD HH:mm：ss 最常用**
+        1. timestamp 时间戳 1970 1.1 到现在的毫秒数
+        1. year 年份表示
+</code></pre>
+<p><a name="Jb3Dd"></a></p>
+<h2 id="4-null"><a href="#4-null" class="headerlink" title="4.null"></a>4.null</h2><pre><code>        1. 没有值，未知 
+        1. ==不要使用NULL进行运算
+</code></pre>
+<p><a name="SVqqK"></a></p>
+<h1 id="数据库的字段属性（重点）"><a href="#数据库的字段属性（重点）" class="headerlink" title="数据库的字段属性（重点）"></a>数据库的字段属性（重点）</h1><pre><code>     - unsigned ： 该列不能声明为负数
+     - zerofill：零填充 
+     - 自增： 自动在上一条记录的基础上+1（默认）通常用来设计唯一的主键~index，必须是整数类型。
+     - 非空 ：Not null
+     - default ： 设置默认的值
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;* 每一个表，都必须存在以下五个字段！未来做项目用的，表示一个记录存在意义！
+id	主键
+&#96;version&#96;	乐观锁
+is_delete	伪删除
+gmt_create	创建时间
+gmt_update	修改时间
+*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="z1lSm"></a></p>
+<h1 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h1><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;student&#96; (
+	&#96;id&#96; INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+	&#96;name&#96; VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+	&#96;pwd&#96; VARCHAR(20) NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
+	&#96;sex&#96; VARCHAR(2) NOT NULL DEFAULT &#39;女&#39; COMMENT &#39;性别&#39;,
+	&#96;birthday&#96; DATETIME DEFAULT NULL COMMENT &#39;出生日期&#39;,
+	&#96;address&#96; VARCHAR(100) DEFAULT NULL COMMENT &#39;家庭住址&#39;,
+	&#96;email&#96; VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,
+	PRIMARY KEY(&#96;id&#96;)
+)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="MwNAO"></a></p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE [IF NOT EXISTS] &#96;表名&#96;(
+	&#96;字段名&#96; 列属性 [属性] [索引] [注释]，
+    &#96;字段名&#96; 列属性 [属性] [索引] [注释]，
+    ......
+    &#96;字段名&#96; 列属性 [属性] [索引] [注释]
+)[表类型][字符集设置][注释]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="Bk7eN"></a></p>
+<h1 id="关于数据库引擎"><a href="#关于数据库引擎" class="headerlink" title="关于数据库引擎"></a>关于数据库引擎</h1><ul>
+<li>Innodb：默认使用</li>
+<li>MYISAM ：早些年使用</li>
+</ul>
+<p>区别：</p>
+<table>
+<thead>
+<tr>
+<th><br /></th>
+<th>MYISAM</th>
+<th>INNODB</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>事务支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>数据行锁定</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>外键约束</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>全文索引</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>表空间的大小</td>
+<td>较少</td>
+<td>较大，约为MYISAM的2倍</td>
+</tr>
+</tbody></table>
+<p>常规使用操作：<br />MYISAM: 节约空间，速度较快<br />Innodb：安全性高，事物的处理，多表多用户操作</p>
+<p><a name="emxyx"></a></p>
+<h1 id="修改删除表"><a href="#修改删除表" class="headerlink" title="修改删除表"></a>修改删除表</h1><p><a name="TKXo0"></a></p>
+<h2 id="修改："><a href="#修改：" class="headerlink" title="修改："></a>修改：</h2><pre class="line-numbers language-none"><code class="language-none">-- 修改表名	ALTER TABLE 旧表名 RENAME AS 新表名
+ALTER TABLE student RENAME AS student1
+-- 增加表的字段 ALTER TABLE 表名 ADD 字段名 字段的列属性
+ALTER TABLE student1 ADD age INT(3)
+-- 修改表的字段 （重命名，修改约束！）
+-- ALTER TABLE 表名 MODIFY 字段名 列属性[]
+ALTER TABLE student1 MODIFY age VARCHAR(3)   -- 修改约束
+-- ALTER TABLE 表名 MODIFY 旧字段名 新字段名 列属性[]
+ALTER TABLE student1 CHANGE age Age INT(3)   -- 字段重命名
+-- 删除表的字段	ALTER TABLE 表名 DROP 字段名
+ALTER TABLE student1 DROP Age<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="WoGI6"></a></p>
+<h2 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h2><pre class="line-numbers language-none"><code class="language-none">-- 删除表（如果表存在再删除）
+DROP TABLE IF EXISTS teacher<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><a name="NvsTd"></a></p>
+<h1 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h1><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;grade&#96; (
+	&#96;gradeid&#96; INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年级id&#39;,
+	&#96;gradename&#96; VARCHAR(50) NOT NULL COMMENT &#39;年级名称&#39;,
+	PRIMARY KEY(&#96;gradeid&#96;)
+)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+CREATE TABLE IF NOT EXISTS &#96;student&#96; (
+	&#96;id&#96; INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+	&#96;name&#96; VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+	&#96;pwd&#96; VARCHAR(20) NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
+	&#96;sex&#96; VARCHAR(2) NOT NULL DEFAULT &#39;女&#39; COMMENT &#39;性别&#39;,
+	&#96;birthday&#96; DATETIME DEFAULT NULL COMMENT &#39;出生日期&#39;,
+	&#96;gradeid&#96; INT(10) NOT NULL COMMENT &#39;学生的年级&#39;,
+	&#96;address&#96; VARCHAR(100) DEFAULT NULL COMMENT &#39;家庭住址&#39;,
+	&#96;email&#96; VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,
+	PRIMARY KEY(&#96;id&#96;)
+)ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+ALTER TABLE &#96;student&#96;
+ADD CONSTRAINT &#96;FK_gradeid&#96; FOREIGN KEY (&#96;gradeid&#96;) REFERENCES &#96;grade&#96; (&#96;gradeid&#96;)
+-- ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY（作为外键的列）REFERENCES 哪个表（哪个字段）
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以上的操作都是物理外键，数据库级别的外键，不建议使用！（避免数据库过多造成困扰）<br /><strong>最佳实践</strong></p>
+<ul>
+<li><p>数据库就是单纯的表，只用来存数据，只有行（数据）和列（字段）</p>
+</li>
+<li><p>我们想使用多张表的数据，想使用外键（程序去实现）<br><a name="VR11g"></a></p>
+<h1 id="sql操作"><a href="#sql操作" class="headerlink" title="sql操作"></a>sql操作</h1><p><a name="BZw8Q"></a></p>
+<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><p>语法：<code>insert into 表名([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;,...)</code></p>
+<pre class="line-numbers language-none"><code class="language-none">-- 插入语句（添加）
+-- insert into 表名([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;,...)
+INSERT INTO &#96;grade&#96;(&#96;gradename&#96;) VALUES (&#39;大四&#39;)
+
+-- 由于主键自增我们可以省略 （如果不写表的字段，他就会一一匹配）
+INSERT INTO &#96;grade&#96; VALUES (&#39;大三&#39;)
+
+-- 一般写插入语句，我们一定要数据和字段一一对应！
+
+-- 插入多个字段
+INSERT INTO &#96;grade&#96;(&#96;gradename&#96;) 
+VALUES (&#39;大三&#39;),(&#39;大二&#39;),(&#39;大一&#39;)
+
+INSERT INTO &#96;student&#96;(&#96;name&#96;) VALUES (&#39;张三&#39;)
+
+INSERT INTO &#96;student&#96;(&#96;name&#96;,&#96;pwd&#96;,&#96;sex&#96;) VALUES (&#39;张三&#39;,&#39;aaaaaa&#39;,&#39;男&#39;)
+
+INSERT INTO &#96;student&#96;(&#96;name&#96;,&#96;pwd&#96;,&#96;sex&#96;) 
+VALUES (&#39;李四&#39;,&#39;aaaaaa&#39;,&#39;男&#39;),(&#39;王五&#39;,&#39;aaaaaa&#39;,&#39;男&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注意：</p>
+<pre><code>1. 字段和字段之间使用英文逗号隔开
+1. 字段是可以省略的，但是后面的值必须要一一对应，不能少
+1. 可以同时插入多条数据，VALUES后面的值，需要使用，隔开即可VALUSE (),(),...
+</code></pre>
+</li>
+</ul>
+<p><a name="LYeek"></a></p>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><p>语法：UPDATE 表名 SET colnum_name&#x3D;value，[colnum_name&#x3D;value,…] WHERE [条件]</p>
+<p><a name="gFZum"></a></p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>语法：delete from 表名 [where 条件]&#96;<br />Truncate命令：完全清空一个数据库表，表的结构和索引约束不会变！<br><a name="nHAac"></a></p>
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p>语法：SELECT 字段,… FROM 表</p>
+<p><strong>distinct</strong><br />作用：去除SELECT查询出来的结果中重复的数据，重复的数据只显示一条</p>
+<p><a name="DZMxb"></a></p>
+<h3 id="联表查询"><a href="#联表查询" class="headerlink" title="联表查询"></a>联表查询</h3><p>Join<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648484644146-dff18579-65cd-4869-b455-affe56c8fdf8.png#clientId=u2d08d468-e396-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u7f5eaaa9&originHeight=752&originWidth=1000&originalType=url&ratio=1&rotation=0&showTitle=false&size=401494&status=done&style=none&taskId=u2d5d341d-c9e6-4b3b-92d3-9557c795809&title=" alt="image.png"><br />   </p>
+<table>
+<thead>
+<tr>
+<th>操作符名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>INNER JOIN</td>
+<td>如果表中至少有一个匹配，则返回行</td>
+</tr>
+<tr>
+<td>LEFT JOIN</td>
+<td>即使右表中没有匹配，也从左表中返回所有的行</td>
+</tr>
+<tr>
+<td>RIGHT JOIN</td>
+<td>即使左表中没有匹配，也从右表中返回所有的行</td>
+</tr>
+</tbody></table>
+<p><strong>自连接</strong><br />自己的表和自己的表连接，核心：<strong>一张表拆为两张一样的表即可</strong><br><a name="gJmwK"></a></p>
+<h2 id="分页和排序"><a href="#分页和排序" class="headerlink" title="分页和排序"></a>分页和排序</h2><p><a name="L8XZn"></a></p>
+<h3 id="排序："><a href="#排序：" class="headerlink" title="排序："></a>排序：</h3><pre><code>     - 关键字：order by
+     - 升序 : asc
+     - 降序 ：desc
+</code></pre>
+<p><a name="hqWZD"></a></p>
+<h3 id="分页："><a href="#分页：" class="headerlink" title="分页："></a>分页：</h3><pre><code>     - 语法：limit 起始页 页面的大小
+</code></pre>
+<p><a name="Dj0Iv"></a></p>
+<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>COUNT()</td>
+<td>计数</td>
+</tr>
+<tr>
+<td>SUM()</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>AVG()</td>
+<td>平均值</td>
+</tr>
+<tr>
+<td>MAX()</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>MIN()</td>
+<td>最小值</td>
+</tr>
+</tbody></table>
+<p>注意：</p>
+<ul>
+<li>从含义上讲，count(1) 与 count(*) 都表示对全部数据行的查询。<ul>
+<li>count(字段) 会统计该字段在表中出现的次数，忽略字段为null 的情况。即不统计字段为null 的记录。</li>
+<li>count(*) 包括了所有的列，相当于行数，在统计结果的时候，包含字段为null 的记录；</li>
+<li>count(1) 用1代表代码行，在统计结果的时候，包含字段为null 的记录 。<br><a name="FJmoq"></a><h2 id="分组和过滤"><a href="#分组和过滤" class="headerlink" title="分组和过滤"></a>分组和过滤</h2><pre class="line-numbers language-none"><code class="language-none">-- 查询不同课程的平均分,最高分,最低分
+-- 前提:根据不同的课程进行分组
+
+SELECT subjectname,AVG(studentresult) AS 平均分,MAX(StudentResult) AS 最高分,MIN(StudentResult) AS 最低分
+FROM result AS r
+INNER JOIN &#96;subject&#96; AS s
+ON r.subjectno &#x3D; s.subjectno
+GROUP BY r.subjectno --通过什么字段来分组
+HAVING 平均分&gt;80;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+</ul>
+<p><strong>分组之后，只能用having过滤</strong></p>
+<p><a name="XkaND"></a></p>
+<h1 id="数据库级别的MD5"><a href="#数据库级别的MD5" class="headerlink" title="数据库级别的MD5"></a>数据库级别的MD5</h1><ul>
+<li>主要增强算法复杂度和不可逆性</li>
+<li>MD5<strong>不可逆</strong>，具体的值的MD5是一样的</li>
+<li>MD5破解网站的原理，背后有一个字典，MD5加密后的值，加密的前值<br><a name="ZVnEq"></a><h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1>定义：将一组sql放在一个批次中去执行<br><a name="mfaZW"></a><h2 id="事务-ACID原则"><a href="#事务-ACID原则" class="headerlink" title="事务 ACID原则"></a>事务 ACID原则</h2><pre><code>      - 原子性（Atomicity）
+</code></pre>
+</li>
+</ul>
+<p><strong>不可分割，要么都成功，要么都失败</strong></p>
+<pre><code>        - 一致性（Consistency）
+</code></pre>
+<p><strong>事务前后的数据的完整性保持一致</strong></p>
+<pre><code>        - 隔离性（Isolation）
+</code></pre>
+<p><strong>事务的隔离型性是多个用户并发访问数据库时，数据库为每一个用户开启的事务，不能被其他事务的操作所干扰，多个并发事务之间要相互隔离</strong></p>
+<pre><code>        - 持久性（Durabilty）
+</code></pre>
+<p><strong>事务一旦提交则不可逆，被持久化到数据库中</strong><br><a name="OddDZ"></a></p>
+<h2 id="引发的问题"><a href="#引发的问题" class="headerlink" title="引发的问题"></a>引发的问题</h2><p><a name="Z5w5Z"></a></p>
+<h3 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h3><p>一个事务读取了另一个事物未提交的数据<br><a name="tKYK4"></a></p>
+<h3 id="不可重复读"><a href="#不可重复读" class="headerlink" title="不可重复读"></a>不可重复读</h3><p>在一个事务内读取表中某一行的数据，多次读取的结果不同<br><a name="GbnC2"></a></p>
+<h3 id="幻读"><a href="#幻读" class="headerlink" title="幻读"></a>幻读</h3><p>在一个事务内读取到了另一个事务插入的数据，导致前后读取的数据总量不一致。  <br />MySQL是默认开启事务提交的</p>
+<pre class="line-numbers language-none"><code class="language-none">-- 事务
+-- mysql是默认开启事务自动提交的
+SET autocommit &#x3D; 0 -- 关闭
+SET autocommit &#x3D; 1 -- 开启（默认的）
+
+-- 手动处理事务
+SET autocommit &#x3D; 0 -- 关闭自动提交
+
+-- 事务开启
+START TRANSACTION -- 标记一个事务的开始，从这个之后的sql都在同一个事务内
+
+-- 提交 ： 持久化 （成功！）
+COMMIT
+
+-- 回滚： 回到原来的样子 （失败！）
+ROLLBACK
+
+-- 事务结束
+SET autocommit &#x3D; 1 -- 开启自动提交
+
+SAVEPOINT 保存点名 -- 设置一个事务的保存点
+ROLLBACK TO SAVEPOINT 保存点名 -- 回滚到保存点
+RELEASE SAVEPOINT 保存点名 -- 撤销保存点
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a name="SG1wt"></a></p>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>本质：是一种数据结构，帮助高效获取数据。<br><a name="y2z0u"></a></p>
+<h2 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h2><ul>
+<li>主键索引（primary key）</li>
+</ul>
+<p>唯一标识，主键不可重复，只能有一个列作为主键</p>
+<ul>
+<li>唯一索引（Unique key）</li>
+</ul>
+<p>可重复，避免重复的列出现，多个列都可以标识为唯一索引</p>
+<ul>
+<li>常规索引（key&#x2F;index）</li>
+</ul>
+<p>默认，index&#x2F;key 来设置</p>
+<ul>
+<li>全文索引（FullText）</li>
+</ul>
+<p>在特定的数据库引擎下才有，如：MyISAM<br />快速定位数据<br><a name="xUGbf"></a></p>
+<h2 id="索隐原则："><a href="#索隐原则：" class="headerlink" title="索隐原则："></a>索隐原则：</h2><ul>
+<li>不是越多越好</li>
+<li>不要对进程变动数据加索引</li>
+<li>小数据量的表不需要加索引</li>
+<li>索引一般加在常用来查询的字段上<br><a name="IAacW"></a><h2 id="数据结构：B-TREE（Innodb的默认数据结构）"><a href="#数据结构：B-TREE（Innodb的默认数据结构）" class="headerlink" title="数据结构：B TREE（Innodb的默认数据结构）"></a>数据结构：B TREE（Innodb的默认数据结构）</h2></li>
+</ul>
+<p><a name="IQDeT"></a></p>
+<h1 id="数据库三大范式"><a href="#数据库三大范式" class="headerlink" title="数据库三大范式"></a>数据库三大范式</h1><p><strong>为什么需要数据规范化？</strong></p>
+<ul>
+<li>信息重复</li>
+<li>更新异常</li>
+<li>插入异常<ul>
+<li>无法正常显示信息</li>
+</ul>
+</li>
+<li>删除异常<ul>
+<li>丢失有效的信息</li>
+</ul>
+</li>
+</ul>
+<p><strong>三大范式</strong><br><a name="ittiW"></a></p>
+<h2 id="第一范式-1st-NF"><a href="#第一范式-1st-NF" class="headerlink" title="第一范式 (1st NF)"></a>第一范式 (1st NF)</h2><p>要求数据库表的每一列都是不可分割的原子数据项。<br><a name="eyS6M"></a></p>
+<h2 id="第二范式-2nd-NF"><a href="#第二范式-2nd-NF" class="headerlink" title="第二范式(2nd NF)"></a>第二范式(2nd NF)</h2><p>满足第二范式（2NF）必须先满足第一范式（1NF）。<br />第二范式要求每个表只描述一件事情<br /><strong>在第一范式的基础上，非主属性必须完全依赖于候选码（消除非主属性对于主码的部分函数依赖）</strong><br />确保每一列都和主键相关，而不能只与主键的某一部分相关<br><a name="gm1UK"></a></p>
+<h2 id="第三范式-3rd-NF"><a href="#第三范式-3rd-NF" class="headerlink" title="第三范式(3rd NF)"></a>第三范式(3rd NF)</h2><p>满足第三范式（3NF）必须先满足第二范式（2NF）。<br /><strong>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</strong><br /><strong>任何非主属性不依赖于其他非主属性</strong><br /><strong>消除了传递依赖</strong></p>
+<p>三个范式是规范了数据库的设计<br /><strong>规范性 和 性能的问题</strong><br />关联查询的表不得超过三张表</p>
+<ul>
+<li>考虑商业化的需求和目标，（成本，用户体验！）数据库的性能更加重要</li>
+<li>在规范性能的问题的时候，需要适当的考虑一下 规范性！</li>
+<li>故意给某些表增加一些冗余的字段。（从多表查询中变为单表查询）</li>
+<li>故意增加一些计算列（从大数据量降低为小数据量的查询：索引）</li>
+</ul>
 
                 
             </div>
@@ -529,7 +897,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://910650692.github.io/2022/04/13/hello-world/">https://910650692.github.io/2022/04/13/hello-world/</a>
+                    <a href="https://910650692.github.io/2022/04/13/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">https://910650692.github.io/2022/04/13/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -567,8 +935,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/First-Blog/">
-                                    <span class="chip bg-color">First Blog</span>
+                                <a href="/tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
                         </div>
@@ -742,9 +1114,64 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/04/13/Mysql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Mysql基础知识">
+                        
+                        <span class="card-title">Mysql基础知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MySQL基础
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2022/04/13/JVM/">
                     <div class="card-image">
@@ -762,9 +1189,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -782,52 +1209,6 @@
                     
                     <a href="/tags/JVM/">
                         <span class="chip bg-color">JVM</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/04/13/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-13
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            沈嘉伟
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/First-Blog/">
-                        <span class="chip bg-color">First Blog</span>
                     </a>
                     
                 </div>
@@ -945,6 +1326,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
