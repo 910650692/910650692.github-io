@@ -462,7 +462,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-18
+                    2022-04-20
                 </div>
                 
 
@@ -500,13 +500,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <meta name="referrer" content="no-referrer" />
-#  1.基础知识
-- Redis的**端口号**为6379
-- Redis总共拥有16个数据库，默认使用第0个
-- keys *命令 查看所有的key
-- flushdb 清除当前数据库
-- Redis是**单线程**的（速度快），基于内存操作（所以瓶颈为机器的内存和网络带宽）
 
+<h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1.基础知识"></a>1.基础知识</h1><ul>
+<li>Redis的<strong>端口号</strong>为6379</li>
+<li>Redis总共拥有16个数据库，默认使用第0个</li>
+<li>keys *命令 查看所有的key</li>
+<li>flushdb 清除当前数据库</li>
+<li>Redis是<strong>单线程</strong>的（速度快），基于内存操作（所以瓶颈为机器的内存和网络带宽）</li>
+</ul>
 <p>核心：redis将所有数据放在内存中，所以用单线程操作效率最高，而多线程牵扯到cpu的上下文切换（耗时）。<br>xshell连接redis,<strong>在 &#x2F;usr&#x2F;local&#x2F;bin 下</strong></p>
 <pre class="line-numbers language-none"><code class="language-none">[root@VM-4-15-centos bin]# redis-server sjwconfig&#x2F;redis.conf
 [root@VM-4-15-centos bin]# redis-cli -p 6379
