@@ -501,7 +501,7 @@
             <div id="articleContent">
                 <meta name="referrer" content="no-referrer" />
 
-<h1 id="1-登录"><a href="#1-登录" class="headerlink" title="1.登录"></a>1.登录</h1><h2 id="业务层"><a href="#业务层" class="headerlink" title="业务层"></a>业务层</h2><ol>
+<h2 id="1-登录"><a href="#1-登录" class="headerlink" title="1.登录"></a>1.登录</h2><h4 id="业务层"><a href="#业务层" class="headerlink" title="业务层"></a>业务层</h4><ol>
 <li>前端传入账号和密码，进入数据库查询user</li>
 <li>需要用一个Login ticket类来记录登录的凭证状态</li>
 <li>先进行空值处理</li>
@@ -515,7 +515,7 @@
        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <ul>
-<li>然后生成登录凭证	<h2 id="表现层"><a href="#表现层" class="headerlink" title="表现层"></a>表现层</h2></li>
+<li>然后生成登录凭证	<h4 id="表现层"><a href="#表现层" class="headerlink" title="表现层"></a>表现层</h4></li>
 </ul>
 <ol>
 <li>先检验验证码</li>
@@ -528,7 +528,7 @@
            return &quot;redirect:&#x2F;index&quot;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 html里取request的值，可以用${param.username}</li>
 </ol>
-<h1 id="2-显示登录信息"><a href="#2-显示登录信息" class="headerlink" title="2.显示登录信息"></a>2.显示登录信息</h1><ul>
+<h2 id="2-显示登录信息"><a href="#2-显示登录信息" class="headerlink" title="2.显示登录信息"></a>2.显示登录信息</h2><ul>
 <li>拦截器示例<ul>
 <li>定义拦截器，实现HandlerInterceptor</li>
 <li>配置拦截器，为它指定拦截、排除的路径</li>
@@ -542,9 +542,9 @@ html里取request的值，可以用${param.username}</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1649174722405-2749389a-09d9-4f9a-8e52-681c48e4c284.png#clientId=u55419258-15d6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=583&id=u17790cd4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=583&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59346&status=done&style=none&taskId=u2e58647d-9b65-4602-b11a-c0a1ef8b5a3&title=&width=1180" alt="image.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1649174722405-2749389a-09d9-4f9a-8e52-681c48e4c284.png##clientId=u55419258-15d6-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=583&id=u17790cd4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=583&originWidth=1180&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59346&status=done&style=none&taskId=u2e58647d-9b65-4602-b11a-c0a1ef8b5a3&title=&width=1180" alt="image.png"></p>
 <p>由于访问是并发访问，所以要把查到的user信息 存在threadlocal里，我们创建一个HostHolder工具类，代替session对象</p>
-<h1 id="3-账号设置"><a href="#3-账号设置" class="headerlink" title="3.账号设置"></a>3.账号设置</h1><ul>
+<h2 id="3-账号设置"><a href="#3-账号设置" class="headerlink" title="3.账号设置"></a>3.账号设置</h2><ul>
 <li><p>上传文件</p>
 <ul>
 <li>请求：必须是POST请求</li>
@@ -556,7 +556,7 @@ html里取request的值，可以用${param.username}</li>
 <ul>
 <li>访问账号设置页面</li>
 <li>上传头像</li>
-<li>获取头像<h1 id="4-检查登录状态"><a href="#4-检查登录状态" class="headerlink" title="4.检查登录状态"></a>4.检查登录状态</h1></li>
+<li>获取头像<h2 id="4-检查登录状态"><a href="#4-检查登录状态" class="headerlink" title="4.检查登录状态"></a>4.检查登录状态</h2></li>
 </ul>
 </li>
 <li><p>使用拦截器</p>
@@ -571,7 +571,7 @@ html里取request的值，可以用${param.username}</li>
 </ul>
 </li>
 <li><p>如何读取注解： Method.getDeclaredAnnotations () Method.getAnnotation (Class annotationClass)</p>
-<h1 id="5-过滤敏感词"><a href="#5-过滤敏感词" class="headerlink" title="5.过滤敏感词"></a>5.过滤敏感词</h1></li>
+<h2 id="5-过滤敏感词"><a href="#5-过滤敏感词" class="headerlink" title="5.过滤敏感词"></a>5.过滤敏感词</h2></li>
 <li><p>前缀树</p>
 <ul>
 <li>名称：Trie、字典树、查找树</li>
@@ -583,7 +583,7 @@ html里取request的值，可以用${param.username}</li>
 <ul>
 <li>定义前缀树</li>
 <li>根据敏感词，初始化前缀树</li>
-<li>编写过滤敏感词的方法<h1 id="6-发帖功能"><a href="#6-发帖功能" class="headerlink" title="6.发帖功能"></a>6.发帖功能</h1></li>
+<li>编写过滤敏感词的方法<h2 id="6-发帖功能"><a href="#6-发帖功能" class="headerlink" title="6.发帖功能"></a>6.发帖功能</h2></li>
 </ul>
 </li>
 <li><p>AJAX</p>
@@ -602,7 +602,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 <li><p>实践</p>
 <ul>
-<li>采用AJAX请求，实现发布帖子的功能。<h1 id="7-Spring事务管理"><a href="#7-Spring事务管理" class="headerlink" title="7.Spring事务管理"></a>7.Spring事务管理</h1></li>
+<li>采用AJAX请求，实现发布帖子的功能。<h2 id="7-Spring事务管理"><a href="#7-Spring事务管理" class="headerlink" title="7.Spring事务管理"></a>7.Spring事务管理</h2></li>
 </ul>
 </li>
 <li><p>声明式事务</p>
@@ -618,7 +618,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 </ul>
 <p><strong>在项目中的应用：评论帖子</strong></p>
-<h1 id="8-显示评论"><a href="#8-显示评论" class="headerlink" title="8.显示评论"></a>8.显示评论</h1><ul>
+<h2 id="8-显示评论"><a href="#8-显示评论" class="headerlink" title="8.显示评论"></a>8.显示评论</h2><ul>
 <li><p>数据层</p>
 <ul>
 <li>根据实体查询一页评论数据。</li>
@@ -633,7 +633,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 <li><p>表现层</p>
 <ul>
-<li>显示帖子详情数据时，同时显示该帖子所有的评论数据。<h1 id="9-添加评论"><a href="#9-添加评论" class="headerlink" title="9.添加评论"></a>9.添加评论</h1></li>
+<li>显示帖子详情数据时，同时显示该帖子所有的评论数据。<h2 id="9-添加评论"><a href="#9-添加评论" class="headerlink" title="9.添加评论"></a>9.添加评论</h2></li>
 </ul>
 </li>
 <li><p>数据层</p>
@@ -650,7 +650,7 @@ html里取request的值，可以用${param.username}</li>
 <li><p>表现层</p>
 <ul>
 <li>处理添加评论数据的请求。</li>
-<li>设置添加评论的表单。<h1 id="10-私信列表"><a href="#10-私信列表" class="headerlink" title="10.私信列表"></a>10.私信列表</h1></li>
+<li>设置添加评论的表单。<h2 id="10-私信列表"><a href="#10-私信列表" class="headerlink" title="10.私信列表"></a>10.私信列表</h2></li>
 </ul>
 </li>
 <li><p>私信列表</p>
@@ -662,7 +662,7 @@ html里取request的值，可以用${param.username}</li>
 <li><p>私信详情</p>
 <ul>
 <li>查询某个会话所包含的私信。</li>
-<li>支持分页显示。<h1 id="11-发送私信"><a href="#11-发送私信" class="headerlink" title="11.发送私信"></a>11.发送私信</h1></li>
+<li>支持分页显示。<h2 id="11-发送私信"><a href="#11-发送私信" class="headerlink" title="11.发送私信"></a>11.发送私信</h2></li>
 </ul>
 </li>
 <li><p>发送私信</p>
@@ -673,7 +673,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 <li><p>设置已读</p>
 <ul>
-<li>访问私信详情时，将显示的私信设置为已读状态。<h1 id="12-统一异常处理"><a href="#12-统一异常处理" class="headerlink" title="12.统一异常处理"></a>12.统一异常处理</h1></li>
+<li>访问私信详情时，将显示的私信设置为已读状态。<h2 id="12-统一异常处理"><a href="#12-统一异常处理" class="headerlink" title="12.统一异常处理"></a>12.统一异常处理</h2></li>
 </ul>
 </li>
 <li><p>@ControllerAdvice</p>
@@ -694,7 +694,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 <li><p>@DataBinder</p>
 <ul>
-<li>用于修饰方法，该方法会在Controller方法执行前被调用，用于绑定参数的转换器。<h1 id="13-同意记录日志"><a href="#13-同意记录日志" class="headerlink" title="13.同意记录日志"></a>13.同意记录日志</h1></li>
+<li>用于修饰方法，该方法会在Controller方法执行前被调用，用于绑定参数的转换器。<h2 id="13-同意记录日志"><a href="#13-同意记录日志" class="headerlink" title="13.同意记录日志"></a>13.同意记录日志</h2></li>
 </ul>
 </li>
 </ul>
@@ -734,7 +734,7 @@ html里取request的值，可以用${param.username}</li>
 <li><p>CGLib动态代理</p>
 <ul>
 <li>采用底层的字节码技术，在运行时创建子类代理实例。</li>
-<li>当目标对象不存在接口时，Spring AOP会采用此种方式，在子类实例中织入代码。<h1 id="14-Spring整合redis"><a href="#14-Spring整合redis" class="headerlink" title="14. Spring整合redis"></a>14. Spring整合redis</h1></li>
+<li>当目标对象不存在接口时，Spring AOP会采用此种方式，在子类实例中织入代码。<h2 id="14-Spring整合redis"><a href="#14-Spring整合redis" class="headerlink" title="14. Spring整合redis"></a>14. Spring整合redis</h2></li>
 </ul>
 </li>
 <li><p>引入依赖</p>
@@ -754,7 +754,7 @@ html里取request的值，可以用${param.username}</li>
 <li>redisTemplate.opsForHash()</li>
 <li>redisTemplate.opsForList()</li>
 <li>redisTemplate.opsForSet()</li>
-<li>redisTemplate.opsForZSet()<h1 id="15-Redis实现点赞功能"><a href="#15-Redis实现点赞功能" class="headerlink" title="15. Redis实现点赞功能"></a>15. Redis实现点赞功能</h1></li>
+<li>redisTemplate.opsForZSet()<h2 id="15-Redis实现点赞功能"><a href="#15-Redis实现点赞功能" class="headerlink" title="15. Redis实现点赞功能"></a>15. Redis实现点赞功能</h2></li>
 </ul>
 </li>
 <li><p>点赞</p>
@@ -776,7 +776,7 @@ html里取request的值，可以用${param.username}</li>
 </li>
 </ul>
 <p>点赞更新频率较高且需要实时更新，存在MySQL里会被高频读写，IO开销大，读内存速度快</p>
-<p>先写个工具类，返回拼接过后的rediskey<br><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1650378409011-31f430f2-62a3-4dc2-b279-fe160edc67f5.png#clientId=u1f8e6e56-996c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=258&id=ua8ae14fd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=258&originWidth=741&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33074&status=done&style=none&taskId=ud54a58ae-93e2-4f81-bded-67275db5d33&title=&width=741" alt="image.png"><br>直接在业务层进行开发</p>
+<p>先写个工具类，返回拼接过后的rediskey<br><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1650378409011-31f430f2-62a3-4dc2-b279-fe160edc67f5.png##clientId=u1f8e6e56-996c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=258&id=ua8ae14fd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=258&originWidth=741&originalType=binary&ratio=1&rotation=0&showTitle=false&size=33074&status=done&style=none&taskId=ud54a58ae-93e2-4f81-bded-67275db5d33&title=&width=741" alt="image.png"><br>直接在业务层进行开发</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>nowcoder<span class="token punctuation">.</span>community<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">RedisKeyUtil</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">Autowired</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>data<span class="token punctuation">.</span>redis<span class="token punctuation">.</span>core<span class="token punctuation">.</span></span><span class="token class-name">RedisTemplate</span><span class="token punctuation">;</span>
@@ -846,7 +846,7 @@ html里取request的值，可以用${param.username}</li>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h2 id="实现某个用户的赞"><a href="#实现某个用户的赞" class="headerlink" title="实现某个用户的赞"></a>实现某个用户的赞</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> SPLIT <span class="token operator">=</span> <span class="token string">":"</span><span class="token punctuation">;</span>
+<h4 id="实现某个用户的赞"><a href="#实现某个用户的赞" class="headerlink" title="实现某个用户的赞"></a>实现某个用户的赞</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> SPLIT <span class="token operator">=</span> <span class="token string">":"</span><span class="token punctuation">;</span>
   <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> PREFIX_ENTITY_LIKE <span class="token operator">=</span> <span class="token string">"like:entity"</span><span class="token punctuation">;</span>
   <span class="token keyword">private</span>  <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> PREFIX_USER_LIKE <span class="token operator">=</span> <span class="token string">"like:user"</span><span class="token punctuation">;</span>
   <span class="token comment">//某个实体的赞</span>

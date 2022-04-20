@@ -518,10 +518,10 @@
 <pre class="line-numbers language-none"><code class="language-none">use &#96;school&#96;
 -- 如果你的表名或者字段名是一个特殊字符（关键字），就需要带&#96;&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><a name="bAxBQ"></a></p>
-<h1 id="数据库的列类型"><a href="#数据库的列类型" class="headerlink" title="数据库的列类型"></a>数据库的列类型</h1><p><a name="ZvL3k"></a></p>
 </li>
 </ul>
-<h2 id="1-数值"><a href="#1-数值" class="headerlink" title="1.数值"></a>1.数值</h2><pre><code>        - **整数**
+<h2 id="数据库的列类型"><a href="#数据库的列类型" class="headerlink" title="数据库的列类型"></a>数据库的列类型</h2><p><a name="ZvL3k"></a></p>
+<h4 id="1-数值"><a href="#1-数值" class="headerlink" title="1.数值"></a>1.数值</h4><pre><code>        - **整数**
            1. tinyint  1个字节
            1. smallint 2个字节
            1. mediumint 3个字节
@@ -533,24 +533,24 @@
            1. decimal 字符串形式的浮点数
 </code></pre>
 <p><a name="p7DiI"></a></p>
-<h2 id="2-字符串"><a href="#2-字符串" class="headerlink" title="2.字符串"></a>2.字符串</h2><pre><code>        1. char 字符串固定大小的0-255
+<h4 id="2-字符串"><a href="#2-字符串" class="headerlink" title="2.字符串"></a>2.字符串</h4><pre><code>        1. char 字符串固定大小的0-255
         1. **varchar 可变字符串 0-65535	常用的 String**
         1. tinytext 微型文本 2^8-1
         1. text 文本串 2^16-1
 </code></pre>
 <p><a name="rCRjW"></a></p>
-<h2 id="3-时间日期"><a href="#3-时间日期" class="headerlink" title="3.时间日期"></a>3.时间日期</h2><pre><code>        1. date YYYY-MM-DD 日期
+<h4 id="3-时间日期"><a href="#3-时间日期" class="headerlink" title="3.时间日期"></a>3.时间日期</h4><pre><code>        1. date YYYY-MM-DD 日期
         1. time HH:mm：ss 时间格式
         1. **datetime YYYY-MM-DD HH:mm：ss 最常用**
         1. timestamp 时间戳 1970 1.1 到现在的毫秒数
         1. year 年份表示
 </code></pre>
 <p><a name="Jb3Dd"></a></p>
-<h2 id="4-null"><a href="#4-null" class="headerlink" title="4.null"></a>4.null</h2><pre><code>        1. 没有值，未知 
+<h4 id="4-null"><a href="#4-null" class="headerlink" title="4.null"></a>4.null</h4><pre><code>        1. 没有值，未知 
         1. ==不要使用NULL进行运算
 </code></pre>
 <p><a name="SVqqK"></a></p>
-<h1 id="数据库的字段属性（重点）"><a href="#数据库的字段属性（重点）" class="headerlink" title="数据库的字段属性（重点）"></a>数据库的字段属性（重点）</h1><pre><code>     - unsigned ： 该列不能声明为负数
+<h2 id="数据库的字段属性（重点）"><a href="#数据库的字段属性（重点）" class="headerlink" title="数据库的字段属性（重点）"></a>数据库的字段属性（重点）</h2><pre><code>     - unsigned ： 该列不能声明为负数
      - zerofill：零填充 
      - 自增： 自动在上一条记录的基础上+1（默认）通常用来设计唯一的主键~index，必须是整数类型。
      - 非空 ：Not null
@@ -565,7 +565,7 @@ gmt_create	创建时间
 gmt_update	修改时间
 *&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a name="z1lSm"></a></p>
-<h1 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h1><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;student&#96; (
+<h2 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h2><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;student&#96; (
 	&#96;id&#96; INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
 	&#96;name&#96; VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
 	&#96;pwd&#96; VARCHAR(20) NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
@@ -576,14 +576,14 @@ gmt_update	修改时间
 	PRIMARY KEY(&#96;id&#96;)
 )ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;utf8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a name="MwNAO"></a></p>
-<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE [IF NOT EXISTS] &#96;表名&#96;(
+<h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE [IF NOT EXISTS] &#96;表名&#96;(
 	&#96;字段名&#96; 列属性 [属性] [索引] [注释]，
     &#96;字段名&#96; 列属性 [属性] [索引] [注释]，
     ......
     &#96;字段名&#96; 列属性 [属性] [索引] [注释]
 )[表类型][字符集设置][注释]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a name="Bk7eN"></a></p>
-<h1 id="关于数据库引擎"><a href="#关于数据库引擎" class="headerlink" title="关于数据库引擎"></a>关于数据库引擎</h1><ul>
+<h2 id="关于数据库引擎"><a href="#关于数据库引擎" class="headerlink" title="关于数据库引擎"></a>关于数据库引擎</h2><ul>
 <li>Innodb：默认使用</li>
 <li>MYISAM ：早些年使用</li>
 </ul>
@@ -624,8 +624,8 @@ gmt_update	修改时间
 </tbody></table>
 <p>常规使用操作：<br />MYISAM: 节约空间，速度较快<br />Innodb：安全性高，事物的处理，多表多用户操作</p>
 <p><a name="emxyx"></a></p>
-<h1 id="修改删除表"><a href="#修改删除表" class="headerlink" title="修改删除表"></a>修改删除表</h1><p><a name="TKXo0"></a></p>
-<h2 id="修改："><a href="#修改：" class="headerlink" title="修改："></a>修改：</h2><pre class="line-numbers language-none"><code class="language-none">-- 修改表名	ALTER TABLE 旧表名 RENAME AS 新表名
+<h2 id="修改删除表"><a href="#修改删除表" class="headerlink" title="修改删除表"></a>修改删除表</h2><p><a name="TKXo0"></a></p>
+<h4 id="修改："><a href="#修改：" class="headerlink" title="修改："></a>修改：</h4><pre class="line-numbers language-none"><code class="language-none">-- 修改表名	ALTER TABLE 旧表名 RENAME AS 新表名
 ALTER TABLE student RENAME AS student1
 -- 增加表的字段 ALTER TABLE 表名 ADD 字段名 字段的列属性
 ALTER TABLE student1 ADD age INT(3)
@@ -637,10 +637,10 @@ ALTER TABLE student1 CHANGE age Age INT(3)   -- 字段重命名
 -- 删除表的字段	ALTER TABLE 表名 DROP 字段名
 ALTER TABLE student1 DROP Age<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a name="WoGI6"></a></p>
-<h2 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h2><pre class="line-numbers language-none"><code class="language-none">-- 删除表（如果表存在再删除）
+<h4 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h4><pre class="line-numbers language-none"><code class="language-none">-- 删除表（如果表存在再删除）
 DROP TABLE IF EXISTS teacher<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><a name="NvsTd"></a></p>
-<h1 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h1><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;grade&#96; (
+<h2 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h2><pre class="line-numbers language-none"><code class="language-none">CREATE TABLE IF NOT EXISTS &#96;grade&#96; (
 	&#96;gradeid&#96; INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年级id&#39;,
 	&#96;gradename&#96; VARCHAR(50) NOT NULL COMMENT &#39;年级名称&#39;,
 	PRIMARY KEY(&#96;gradeid&#96;)
@@ -667,8 +667,8 @@ ADD CONSTRAINT &#96;FK_gradeid&#96; FOREIGN KEY (&#96;gradeid&#96;) REFERENCES &
 <li>数据库就是单纯的表，只用来存数据，只有行（数据）和列（字段）</li>
 <li>我们想使用多张表的数据，想使用外键（程序去实现）<br><a name="VR11g"></a></li>
 </ul>
-<h1 id="sql操作"><a href="#sql操作" class="headerlink" title="sql操作"></a>sql操作</h1><p><a name="BZw8Q"></a></p>
-<h2 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h2><p>语法：<code>insert into 表名([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;,...)</code></p>
+<h2 id="sql操作"><a href="#sql操作" class="headerlink" title="sql操作"></a>sql操作</h2><p><a name="BZw8Q"></a></p>
+<h4 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h4><p>语法：<code>insert into 表名([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;,...)</code></p>
 <pre class="line-numbers language-none"><code class="language-none">-- 插入语句（添加）
 -- insert into 表名([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;,...)
 INSERT INTO &#96;grade&#96;(&#96;gradename&#96;) VALUES (&#39;大四&#39;)
@@ -694,13 +694,13 @@ VALUES (&#39;李四&#39;,&#39;aaaaaa&#39;,&#39;男&#39;),(&#39;王五&#39;,&#39;
   1. 可以同时插入多条数据，VALUES后面的值，需要使用，隔开即可VALUSE (),(),...
 </code></pre>
 <p><a name="LYeek"></a></p>
-<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><p>语法：UPDATE 表名 SET colnum_name&#x3D;value，[colnum_name&#x3D;value,…] WHERE [条件]</p>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><p>语法：UPDATE 表名 SET colnum_name&#x3D;value，[colnum_name&#x3D;value,…] WHERE [条件]</p>
 <p><a name="gFZum"></a></p>
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>语法：delete from 表名 [where 条件]&#96;<br />Truncate命令：完全清空一个数据库表，表的结构和索引约束不会变！<br><a name="nHAac"></a></p>
-<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p>语法：SELECT 字段,… FROM 表</p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>语法：delete from 表名 [where 条件]&#96;<br />Truncate命令：完全清空一个数据库表，表的结构和索引约束不会变！<br><a name="nHAac"></a></p>
+<h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><p>语法：SELECT 字段,… FROM 表</p>
 <p><strong>distinct</strong><br />作用：去除SELECT查询出来的结果中重复的数据，重复的数据只显示一条</p>
 <p><a name="DZMxb"></a></p>
-<h3 id="联表查询"><a href="#联表查询" class="headerlink" title="联表查询"></a>联表查询</h3><p>Join<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648484644146-dff18579-65cd-4869-b455-affe56c8fdf8.png" alt="image.png"><br />   </p>
+<h6 id="联表查询"><a href="#联表查询" class="headerlink" title="联表查询"></a>联表查询</h6><p>Join<br /><img src="https://cdn.nlark.com/yuque/0/2022/png/26758626/1648484644146-dff18579-65cd-4869-b455-affe56c8fdf8.png" alt="image.png"><br />   </p>
 <table>
 <thead>
 <tr>
@@ -722,16 +722,16 @@ VALUES (&#39;李四&#39;,&#39;aaaaaa&#39;,&#39;男&#39;),(&#39;王五&#39;,&#39;
 </tr>
 </tbody></table>
 <p><strong>自连接</strong><br />自己的表和自己的表连接，核心：<strong>一张表拆为两张一样的表即可</strong><br><a name="gJmwK"></a></p>
-<h2 id="分页和排序"><a href="#分页和排序" class="headerlink" title="分页和排序"></a>分页和排序</h2><p><a name="L8XZn"></a></p>
-<h3 id="排序："><a href="#排序：" class="headerlink" title="排序："></a>排序：</h3><pre><code>     - 关键字：order by
+<h4 id="分页和排序"><a href="#分页和排序" class="headerlink" title="分页和排序"></a>分页和排序</h4><p><a name="L8XZn"></a></p>
+<h6 id="排序："><a href="#排序：" class="headerlink" title="排序："></a>排序：</h6><pre><code>     - 关键字：order by
      - 升序 : asc
      - 降序 ：desc
 </code></pre>
 <p><a name="hqWZD"></a></p>
-<h3 id="分页："><a href="#分页：" class="headerlink" title="分页："></a>分页：</h3><pre><code>     - 语法：limit 起始页 页面的大小
+<h6 id="分页："><a href="#分页：" class="headerlink" title="分页："></a>分页：</h6><pre><code>     - 语法：limit 起始页 页面的大小
 </code></pre>
 <p><a name="Dj0Iv"></a></p>
-<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><table>
+<h4 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h4><table>
 <thead>
 <tr>
 <th>函数名称</th>
@@ -768,7 +768,7 @@ VALUES (&#39;李四&#39;,&#39;aaaaaa&#39;,&#39;男&#39;),(&#39;王五&#39;,&#39;
 </ul>
 </li>
 </ul>
-<h2 id="分组和过滤"><a href="#分组和过滤" class="headerlink" title="分组和过滤"></a>分组和过滤</h2><pre class="line-numbers language-none"><code class="language-none">-- 查询不同课程的平均分,最高分,最低分
+<h4 id="分组和过滤"><a href="#分组和过滤" class="headerlink" title="分组和过滤"></a>分组和过滤</h4><pre class="line-numbers language-none"><code class="language-none">-- 查询不同课程的平均分,最高分,最低分
 -- 前提:根据不同的课程进行分组
 
 SELECT subjectname,AVG(studentresult) AS 平均分,MAX(StudentResult) AS 最高分,MIN(StudentResult) AS 最低分
@@ -780,13 +780,13 @@ HAVING 平均分&gt;80;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>分组之后，只能用having过滤</strong></p>
 <p><a name="XkaND"></a></p>
-<h1 id="数据库级别的MD5"><a href="#数据库级别的MD5" class="headerlink" title="数据库级别的MD5"></a>数据库级别的MD5</h1><ul>
+<h2 id="数据库级别的MD5"><a href="#数据库级别的MD5" class="headerlink" title="数据库级别的MD5"></a>数据库级别的MD5</h2><ul>
 <li>主要增强算法复杂度和不可逆性</li>
 <li>MD5<strong>不可逆</strong>，具体的值的MD5是一样的</li>
 <li>MD5破解网站的原理，背后有一个字典，MD5加密后的值，加密的前值<br><a name="ZVnEq"></a></li>
 </ul>
-<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><p>定义：将一组sql放在一个批次中去执行<br><a name="mfaZW"></a></p>
-<h2 id="事务-ACID原则"><a href="#事务-ACID原则" class="headerlink" title="事务 ACID原则"></a>事务 ACID原则</h2><pre><code>        - 原子性（Atomicity）
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>定义：将一组sql放在一个批次中去执行<br><a name="mfaZW"></a></p>
+<h4 id="事务-ACID原则"><a href="#事务-ACID原则" class="headerlink" title="事务 ACID原则"></a>事务 ACID原则</h4><pre><code>        - 原子性（Atomicity）
 </code></pre>
 <p><strong>不可分割，要么都成功，要么都失败</strong></p>
 <pre><code>        - 一致性（Consistency）
@@ -798,10 +798,10 @@ HAVING 平均分&gt;80;
 <pre><code>        - 持久性（Durabilty）
 </code></pre>
 <p><strong>事务一旦提交则不可逆，被持久化到数据库中</strong><br><a name="OddDZ"></a></p>
-<h2 id="引发的问题"><a href="#引发的问题" class="headerlink" title="引发的问题"></a>引发的问题</h2><p><a name="Z5w5Z"></a></p>
-<h3 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h3><p>一个事务读取了另一个事物未提交的数据<br><a name="tKYK4"></a></p>
-<h3 id="不可重复读"><a href="#不可重复读" class="headerlink" title="不可重复读"></a>不可重复读</h3><p>在一个事务内读取表中某一行的数据，多次读取的结果不同<br><a name="GbnC2"></a></p>
-<h3 id="幻读"><a href="#幻读" class="headerlink" title="幻读"></a>幻读</h3><p>在一个事务内读取到了另一个事务插入的数据，导致前后读取的数据总量不一致。  <br />MySQL是默认开启事务提交的</p>
+<h4 id="引发的问题"><a href="#引发的问题" class="headerlink" title="引发的问题"></a>引发的问题</h4><p><a name="Z5w5Z"></a></p>
+<h6 id="脏读"><a href="#脏读" class="headerlink" title="脏读"></a>脏读</h6><p>一个事务读取了另一个事物未提交的数据<br><a name="tKYK4"></a></p>
+<h6 id="不可重复读"><a href="#不可重复读" class="headerlink" title="不可重复读"></a>不可重复读</h6><p>在一个事务内读取表中某一行的数据，多次读取的结果不同<br><a name="GbnC2"></a></p>
+<h6 id="幻读"><a href="#幻读" class="headerlink" title="幻读"></a>幻读</h6><p>在一个事务内读取到了另一个事务插入的数据，导致前后读取的数据总量不一致。  <br />MySQL是默认开启事务提交的</p>
 <pre class="line-numbers language-none"><code class="language-none">-- 事务
 -- mysql是默认开启事务自动提交的
 SET autocommit &#x3D; 0 -- 关闭
@@ -827,8 +827,8 @@ ROLLBACK TO SAVEPOINT 保存点名 -- 回滚到保存点
 RELEASE SAVEPOINT 保存点名 -- 撤销保存点
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a name="SG1wt"></a></p>
-<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><p>本质：是一种数据结构，帮助高效获取数据。<br><a name="y2z0u"></a></p>
-<h2 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h2><ul>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>本质：是一种数据结构，帮助高效获取数据。<br><a name="y2z0u"></a></p>
+<h4 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h4><ul>
 <li>主键索引（primary key）</li>
 </ul>
 <p>唯一标识，主键不可重复，只能有一个列作为主键</p>
@@ -844,14 +844,14 @@ RELEASE SAVEPOINT 保存点名 -- 撤销保存点
 <li>全文索引（FullText）</li>
 </ul>
 <p>在特定的数据库引擎下才有，如：MyISAM<br />快速定位数据<br><a name="xUGbf"></a></p>
-<h2 id="索隐原则："><a href="#索隐原则：" class="headerlink" title="索隐原则："></a>索隐原则：</h2><ul>
+<h4 id="索隐原则："><a href="#索隐原则：" class="headerlink" title="索隐原则："></a>索隐原则：</h4><ul>
 <li>不是越多越好</li>
 <li>不要对进程变动数据加索引</li>
 <li>小数据量的表不需要加索引</li>
 <li>索引一般加在常用来查询的字段上<br><a name="IAacW"></a></li>
 </ul>
-<h2 id="数据结构：B-TREE（Innodb的默认数据结构）"><a href="#数据结构：B-TREE（Innodb的默认数据结构）" class="headerlink" title="数据结构：B TREE（Innodb的默认数据结构）"></a>数据结构：B TREE（Innodb的默认数据结构）</h2><p><a name="IQDeT"></a></p>
-<h1 id="数据库三大范式"><a href="#数据库三大范式" class="headerlink" title="数据库三大范式"></a>数据库三大范式</h1><p><strong>为什么需要数据规范化？</strong></p>
+<h4 id="数据结构：B-TREE（Innodb的默认数据结构）"><a href="#数据结构：B-TREE（Innodb的默认数据结构）" class="headerlink" title="数据结构：B TREE（Innodb的默认数据结构）"></a>数据结构：B TREE（Innodb的默认数据结构）</h4><p><a name="IQDeT"></a></p>
+<h2 id="数据库三大范式"><a href="#数据库三大范式" class="headerlink" title="数据库三大范式"></a>数据库三大范式</h2><p><strong>为什么需要数据规范化？</strong></p>
 <ul>
 <li>信息重复</li>
 <li>更新异常</li>
@@ -865,9 +865,9 @@ RELEASE SAVEPOINT 保存点名 -- 撤销保存点
 </li>
 </ul>
 <p><strong>三大范式</strong><br><a name="ittiW"></a></p>
-<h2 id="第一范式-1st-NF"><a href="#第一范式-1st-NF" class="headerlink" title="第一范式 (1st NF)"></a>第一范式 (1st NF)</h2><p>要求数据库表的每一列都是不可分割的原子数据项。<br><a name="eyS6M"></a></p>
-<h2 id="第二范式-2nd-NF"><a href="#第二范式-2nd-NF" class="headerlink" title="第二范式(2nd NF)"></a>第二范式(2nd NF)</h2><p>满足第二范式（2NF）必须先满足第一范式（1NF）。<br />第二范式要求每个表只描述一件事情<br /><strong>在第一范式的基础上，非主属性必须完全依赖于候选码（消除非主属性对于主码的部分函数依赖）</strong><br />确保每一列都和主键相关，而不能只与主键的某一部分相关<br><a name="gm1UK"></a></p>
-<h2 id="第三范式-3rd-NF"><a href="#第三范式-3rd-NF" class="headerlink" title="第三范式(3rd NF)"></a>第三范式(3rd NF)</h2><p>满足第三范式（3NF）必须先满足第二范式（2NF）。<br /><strong>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</strong><br /><strong>任何非主属性不依赖于其他非主属性</strong><br /><strong>消除了传递依赖</strong></p>
+<h4 id="第一范式-1st-NF"><a href="#第一范式-1st-NF" class="headerlink" title="第一范式 (1st NF)"></a>第一范式 (1st NF)</h4><p>要求数据库表的每一列都是不可分割的原子数据项。<br><a name="eyS6M"></a></p>
+<h4 id="第二范式-2nd-NF"><a href="#第二范式-2nd-NF" class="headerlink" title="第二范式(2nd NF)"></a>第二范式(2nd NF)</h4><p>满足第二范式（2NF）必须先满足第一范式（1NF）。<br />第二范式要求每个表只描述一件事情<br /><strong>在第一范式的基础上，非主属性必须完全依赖于候选码（消除非主属性对于主码的部分函数依赖）</strong><br />确保每一列都和主键相关，而不能只与主键的某一部分相关<br><a name="gm1UK"></a></p>
+<h4 id="第三范式-3rd-NF"><a href="#第三范式-3rd-NF" class="headerlink" title="第三范式(3rd NF)"></a>第三范式(3rd NF)</h4><p>满足第三范式（3NF）必须先满足第二范式（2NF）。<br /><strong>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能间接相关。</strong><br /><strong>任何非主属性不依赖于其他非主属性</strong><br /><strong>消除了传递依赖</strong></p>
 <p>三个范式是规范了数据库的设计<br /><strong>规范性 和 性能的问题</strong><br />关联查询的表不得超过三张表</p>
 <ul>
 <li>考虑商业化的需求和目标，（成本，用户体验！）数据库的性能更加重要</li>
