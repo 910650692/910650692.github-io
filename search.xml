@@ -29,6 +29,33 @@
     
     
     <entry>
+      <title>Linux系统中如何收发网络包</title>
+      <link href="/2022/04/21/Linux%E7%B3%BB%E7%BB%9F%E5%A6%82%E4%BD%95%E6%94%B6%E5%8F%91%E7%BD%91%E7%BB%9C%E5%8C%85/"/>
+      <url>/2022/04/21/Linux%E7%B3%BB%E7%BB%9F%E5%A6%82%E4%BD%95%E6%94%B6%E5%8F%91%E7%BD%91%E7%BB%9C%E5%8C%85/</url>
+      
+        <content type="html"><![CDATA[<meta name="referrer" content="no-referrer" /><p><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/26758626/1651158328581-c1446e72-adc1-4a33-92de-107670e352d6.jpeg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计网 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计网 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JUC并发编程(上)</title>
       <link href="/2022/04/21/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(%E4%B8%8A)/"/>
       <url>/2022/04/21/JUC%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(%E4%B8%8A)/</url>
